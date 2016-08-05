@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="header">Decks</h1>
+  <ul style="list-style-type: none">
+  <% Deck.all.each do |deck| %>
+    <li class="decks" ><a href="decks/<%= deck.id %>"><%= deck.name %></a></li>
+  <% end %>
+  </ul>
+</div>

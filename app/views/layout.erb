@@ -17,7 +17,11 @@
       <nav>
         <ul>
           <li><a href="/users/new">Register</a></li>     |
+          <% if current_user %>
           <li><a href="/login">Login</a></li>     |
+          <% else %>
+          <li><a href="/logout">Logout</a></li>
+          <% end %>
           <li><a href="/">Home</a></li>
         </ul>
       </nav>
