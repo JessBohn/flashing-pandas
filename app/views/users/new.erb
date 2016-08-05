@@ -4,7 +4,7 @@
     <input id="user_username_input" type="text" name="user[username]" placeholder="Username" value="<%= @user.try(:username) %>">
 
     <label for="user_password_input">Password:</label>
-    <input id="user_password_input" type="password" name="user[password_hash]" placeholder="Password" value="<%= @user.try(:password_hash) %>">
+    <input id="user_password_input" type="password" name="user[password]" placeholder="Password" value="<%= @user.try(:password) %>">
     <input type='submit' value="Create New Account">
 </form>
 

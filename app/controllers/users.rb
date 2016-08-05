@@ -1,21 +1,23 @@
-#may not need this
 get '/users' do
 	redirect '/login'
-	erb :'/users/profile'
 end
 
 get '/users/new' do
 	erb :'/users/new'
 end
 
+post '/users/new' do
+	erb :'/users/profile'
+end
 
 post '/users' do
 	@user = User.new(params[:user])
-	erb :'/users/new'
-end
-
-get '/users/:id' do
-	erb :'/users/profile'
+	if @user.save
+    redirect "/login"
+  else
+    @errors = @user.errors.full_messages
+    erb :'/users/new'
+  end
 end
 
 get '/users/:id/edit' do
@@ -33,4 +35,3 @@ delete '/users/:id' do
 	user.destroy
 	redirect '/login'
 end
-

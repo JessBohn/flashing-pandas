@@ -6,7 +6,7 @@
     <input id="user_username_input" name="user[username]" type="text" value="<%= @user.try(:username) %>">
 
     <label for="user_password_input">Password:</label>
-    <input id="user_password_input"  name="user[password_hash]" type="text" value="<%= @user.try(:password_hash) %>">
+    <input id="user_password_input"  name="user[password]" type="text" value="<%= @user.try(:password) %>">
 
     <input type="submit" value="Update" class="button">
   </form>
