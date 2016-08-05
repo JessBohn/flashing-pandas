@@ -13,12 +13,15 @@ gem 'activerecord', '~>4.2.0'
 gem 'rake'
 
 gem 'shotgun'
+gem 'bcrypt'
 
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
   gem 'rspec', '~>3.0'
   gem 'capybara'
+  gem 'irbtools', require: 'irbtools/binding'
+  gem 'pry'
 end
 
 group :test, :development do

@@ -1,6 +1,7 @@
 #may not need this
 get '/users' do
 	redirect '/login'
+	erb :'/users/profile'
 end
 
 get '/users/new' do
@@ -18,10 +19,13 @@ get '/users/:id' do
 end
 
 get '/users/:id/edit' do
+	@user = User.find(params[:id])
 	erb :'/users/edit'
 end
 
 put '/users/:id' do
+	user.update_attributes(params[:user])
+  redirect "/users/#{user.id}"
 end
 
 delete '/users/:id' do
