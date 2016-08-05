@@ -10,3 +10,4 @@ User.create(username: "Catsby", password_hash: "neverloveddaisy")
 User.create(username: "losrojos", password_hash: "cincinnati")
 User.create(username: "DBC", password_hash: "igeekallweek")
 User.create(username: "isthis", password_hash: "katyperry")
+
