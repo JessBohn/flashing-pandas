@@ -1,5 +1,6 @@
-get '/users' do |variable|
-	erb :'/users/index'
+#may not need this
+get '/users' do
+	erb :'/users/profile'
 end
 
 get '/users/new' do
