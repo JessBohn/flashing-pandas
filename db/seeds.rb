@@ -1,3 +1,13 @@
+Deck.destroy_all
+
+Deck.create(name: "Ruby")
+Deck.create(name: "Pokemon")
+Deck.create(name: "Cats")
+Deck.create(name: "The Boy Who Lived")
+Deck.create(name: "Tacos")
+Deck.create(name: "The Room")
+
+
 User.destroy_all
 
 User.create(username: "gorejess", password: "Lambch0p")
@@ -10,3 +20,4 @@ User.create(username: "Catsby", password: "neverloveddaisy")
 User.create(username: "losrojos", password: "cincinnati")
 User.create(username: "DBC", password: "igeekallweek")
 User.create(username: "isthis", password: "katyperry")
+
