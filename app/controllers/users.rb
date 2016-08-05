@@ -11,8 +11,8 @@
 # post '/users' do
 # end
 
-# get '/users/:id' do
-# 	erb :'/users/profile'
+# get '/profile' do
+# 	erb :'users/profile'
 # end
 
 # get '/users/:id/edit' do
