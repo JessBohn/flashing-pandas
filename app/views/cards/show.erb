@@ -1,0 +1,10 @@
+<h2><%= current_round.deck %></h2>
+
+<h4><%= @card.question %></h4>
+
+<form action="/cards/<%= @card.id %>/guesses" method="post">
+  <label for='guess'>Enter your guess:</label>
+  <input type="text" name="guess[content]" />
+
+  <input type="submit" value="submit your guess">
+</form>
