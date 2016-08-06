@@ -1,10 +1,10 @@
 After submitting a guess, the user is informed whether or not the guess was correct and shown the correct answer.
 
 
-<h2><%= current_round.deck %></h2>
+<h2><%= current_round.deck.name %></h2>
 
 <h4><%= @guess.card.question %></h4>
-<h4>Correct answer: <%=@card.answer %></h4>
+<h4>Correct answer: <%= @guess.card.answer %></h4>
 <% if @guess.correct == true %>
   <h5>Correct!</h5>
 <% else %>

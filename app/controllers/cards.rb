@@ -1,6 +1,9 @@
 get '/decks/:id' do
   round = Round.create( deck_id: params[:id], user_id: current_user.id )
   session[:round_id] = round.id
+  deck = Deck.find_by_id params[:id]
+  card = deck.cards.sample
+  redirect "/cards/#{card.id}"
   # start round redirect to first card
 end
 
@@ -15,6 +18,6 @@ post '/cards/:id/guesses' do
   @guess.card = Card.find params[:id]
   # pass round the guess
   # round returns next card --> @next_card
-  erb 'cards/feedback'
+  erb :'cards/feedback'
 end
 
