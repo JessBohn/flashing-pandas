@@ -18,14 +18,20 @@ post '/cards/:id/guesses' do
   @guess.round_id = current_round.id
 
   check(@guess)
-  @next_card_id = random_card_id
+  @next_card_id = random_card_id unless second_time_round
 
   if @next_card_id
     erb :'cards/feedback'
   else
-    current_round.correct_firsties = counter_sheet
+    counter_sheet
+    if no_false_shit? && second_time_round
+      "game over"
+    else
+      until grab_false_shit.empty?
+        @next_card_id = false_shit_sampler
+        erb :'cards/feedback'
+      end
+    end
   end
-
-  # finish me off!
 end
 

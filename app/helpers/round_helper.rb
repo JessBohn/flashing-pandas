@@ -27,6 +27,23 @@ helpers do
   end
 
   def counter_sheet
-    current_round.guesses.where(correct: true).count
+    correct = current_round.guesses.where(correct: true).count
+    current_round.correct_firsties = correct
+  end
+
+  def no_false_shit?
+    current_round.guesses.where(correct: false).empty?
+  end
+
+  def grab_false_shit
+    current_round.guesses.where(correct: false).pluck(:card_id)
+  end
+
+  def false_shit_sampler
+    grab_false_shit.sample
+  end
+
+  def second_time_round
+    round_guesses.count >= round_cards.count
   end
 end
