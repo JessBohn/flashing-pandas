@@ -46,4 +46,8 @@ helpers do
   def second_time_round
     round_guesses.count >= round_cards.count
   end
+
+  def firsties
+    current_round.correct_firsties
+  end
 end

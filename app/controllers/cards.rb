@@ -23,9 +23,10 @@ post '/cards/:id/guesses' do
   if @next_card_id
     erb :'cards/feedback'
   else
-    counter_sheet
+    counter_sheet if firsties.nil?
     if no_false_shit? && second_time_round
-      "game over"
+      current_round.save
+      erb :round_results
     else
       until grab_false_shit.empty?
         @next_card_id = false_shit_sampler
