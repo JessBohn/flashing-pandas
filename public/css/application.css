@@ -1,0 +1,62 @@
+
+html {
+  background-color: #264d73;
+  display: table;
+  margin: auto;
+}
+
+body {
+  height: 100%;
+  width: 1000px;
+  background-color: white;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.container {
+  font-family: Lucida Grande;
+}
+
+nav {
+  float: right;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.logo-container {
+  padding: 20px;
+  text-align: center;
+  margin-right: auto;
+}
+
+.logo {
+  margin-top: 100px;
+  width:600px;
+}
+
+.header {
+  font-size: 4em;
+  margin-left: 10%;
+  color: #264d73;
+  text-decoration: underline;
+}
+
+.decks {
+  font-size: 1.5em;
+  margin: 10px;
+  margin-left: 10%;
+}
+
+.decks a:link {
+  color: #264d73;
+}
+
+.decks a:visited {
+  color: #800000;
+}
+
+

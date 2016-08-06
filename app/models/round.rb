@@ -3,6 +3,7 @@ class Round < ActiveRecord::Base
   belongs_to :user
   has_many :guesses
 
+
   def wrong
     @wrong ||= []
   end
@@ -40,4 +41,5 @@ class Round < ActiveRecord::Base
 #   hand = wrong
 #   play_round(hand)
 # end
+
 end
