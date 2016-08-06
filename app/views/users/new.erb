@@ -1,6 +1,13 @@
 <h2>Registration</h2>
 <form action="/users/new" method="post">
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password_hash" placeholder="Password">
+    <label for="user_username_input">Username:</label>
+    <input id="user_username_input" type="text" name="user[username]" placeholder="Username" value="<%= @user.try(:username) %>">
+
+    <label for="user_password_input">Password:</label>
+    <input id="user_password_input" type="password" name="user[password]" placeholder="Password" value="<%= @user.try(:password) %>">
     <input type='submit' value="Create New Account">
 </form>
+
+   
+
+    
