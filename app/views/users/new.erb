@@ -1,5 +1,5 @@
 <h2>Registration</h2>
-<form action="/users/new" method="post">
+<form action="/users" method="post">
     <label for="user_username_input">Username:</label>
     <input id="user_username_input" type="text" name="user[username]" placeholder="Username" value="<%= @user.try(:username) %>">
 
@@ -8,6 +8,6 @@
     <input type='submit' value="Create New Account">
 </form>
 
-   
 
-    
+
+
